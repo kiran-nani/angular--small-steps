@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  myValue = 11;
+  myValue = 12;
+  myValueChange($event){
+  	this.myValue = $event.value;
+  }
 }

@@ -1,2 +1,10 @@
 
-<counter [counterValue]="myValue"></counter>
+<counter #counter [counterValue]="myValue" (counterChange)="myValueChange($event);"></counter>
+
+<p>
+  counter works! and the count is {{ myValue }}
+</p>
+<!-- <input type="text" class="counter_input" [value]="myValue">	 -->
+<button (click)="counter.decrement();">downvote</button>
+<button (click)="counter.increment();">upvote</button>
+
